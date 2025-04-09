@@ -73,7 +73,7 @@ exports.postAddHome = (req, res, next) => {
 
 exports.postEditHome = (req, res, next) => {
   const { id, houseName, price, location, rating, description } =
-    req.body;;
+    req.body;
   Home.findById(id)
     .then((home) => {
       home.houseName = houseName;
@@ -106,14 +106,35 @@ exports.postEditHome = (req, res, next) => {
     });
 };
 
+// exports.postDeleteHome = (req, res, next) => {
+//   const homeId = req.params.homeId;
+//   console.log("Came to delete ", homeId);
+//   Home.findByIdAndDelete(homeId)
+//     .then(() => {
+//       res.redirect("/host/host-dr-list");
+//     })
+//     .catch((error) => {
+//       console.log("Error while deleting ", error);
+//     });
+// };
 exports.postDeleteHome = (req, res, next) => {
   const homeId = req.params.homeId;
-  console.log("Came to delete ", homeId);
+
   Home.findByIdAndDelete(homeId)
-    .then(() => {
+    .then((home) => {
+      if (home && home.photo) {
+        // Delete the associated photo file
+        fs.unlink(home.photo, (err) => {
+          if (err) {
+            console.log("Error while deleting file: ", err);
+          }
+        });
+      }
+      console.log("Doctor deleted successfully.");
       res.redirect("/host/host-dr-list");
     })
-    .catch((error) => {
-      console.log("Error while deleting ", error);
+    .catch((err) => {
+      console.log("Error while deleting doctor: ", err);
+      res.redirect("/host/host-dr-list");
     });
 };
