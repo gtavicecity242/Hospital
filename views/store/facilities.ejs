@@ -1,0 +1,117 @@
+<%- include('../partials/head') %>
+  </head>
+  <body class="bg-gray-50">
+    <%- include('../partials/nav') %>
+
+    <main class="container mx-auto px-4 py-16">
+      <h1 class="text-5xl font-bold text-center text-blue-600 mb-12">Our Hospital Technologies & Facilities</h1>
+
+      <section class="space-y-24 overflow-y-auto max-h-[80vh]">
+
+        <!-- MRI Machine -->
+        <div class="flex flex-col items-center gap-10">
+          <div class="w-full md:w-1/2">
+            <div class="h-[300px] w-[400px] overflow-hidden rounded-lg shadow-md bg-gray-200">
+              <img src="/images/MRI.jpg" alt="MRI Machine" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-red-600 mb-4">Advanced MRI Scanning</h2>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              Our hospital features a state-of-the-art 3 Tesla MRI scanner that delivers highly detailed images in record time.
+              It's used for diagnosing brain conditions, spine issues, joint injuries, and tumors with <strong>99% accuracy</strong>.
+              The scan time is significantly reduced, ensuring better comfort and quicker results.
+            </p>
+          </div>
+        </div>
+
+        <!-- CT Scan -->
+        <div class="flex flex-col items-center gap-10">
+          <div class="w-full md:w-1/2">
+            <div class="h-[300px] w-[400px] overflow-hidden rounded-lg shadow-md bg-gray-200">
+              <img src="/images/CTscan.jpeg" alt="CT Scanner" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-red-600 mb-4">High-Speed CT Scanning</h2>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              Our 128-slice CT scanner provides <strong>ultra-fast imaging</strong> of the chest, abdomen, and cardiovascular system.
+              It’s especially valuable for emergency diagnostics like strokes or internal injuries.
+              With advanced AI reconstruction, image clarity is enhanced while radiation dose is minimized.
+            </p>
+          </div>
+        </div>
+
+        <!-- Robotic Surgery -->
+        <div class="flex flex-col items-center gap-10">
+          <div class="w-full md:w-1/2">
+            <div class="h-[300px] w-[400px] overflow-hidden rounded-lg shadow-md bg-gray-200">
+              <img src="/images/robotic-surgery.jpeg" alt="Robotic Surgery" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-red-600 mb-4">Precision Robotic Surgery</h2>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              We employ the Da Vinci Robotic Surgical System for complex procedures such as urology, gynecology, and general surgery.
+              This enables <strong>minimally invasive operations</strong> with greater precision, smaller incisions, and faster patient recovery.
+              It reduces the risk of infection and speeds up discharge.
+            </p>
+          </div>
+        </div>
+
+        <!-- Digital X-ray -->
+        <div class="flex flex-col items-center gap-10">
+          <div class="w-full md:w-1/2">
+            <div class="h-[300px] w-[400px] overflow-hidden rounded-lg shadow-md bg-gray-200">
+              <img src="/images/xray.jpeg" alt="Digital X-ray Machine" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-red-600 mb-4">Digital X-Ray</h2>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              Our digital radiography system provides <strong>real-time imaging</strong> with exceptional resolution.
+              It is used for detecting fractures, lung infections, and other skeletal or soft tissue conditions.
+              The process is quick, painless, and results are instantly available in our digital system.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pathology Lab -->
+        <div class="flex flex-col items-center gap-10">
+          <div class="w-full md:w-1/2">
+            <div class="h-[300px] w-[400px] overflow-hidden rounded-lg shadow-md bg-gray-200">
+              <img src="/images/lab.jpeg" alt="Modern Pathology Lab" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-red-600 mb-4">Fully Automated Pathology Lab</h2>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              Our NABL-accredited laboratory is equipped with automated machines for blood, urine, and molecular testing.
+              We deliver accurate reports within <strong>2 hours</strong> for most standard tests.
+              Integration with our EHR ensures seamless access to diagnostic results.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ultrasound -->
+        <div class="flex flex-col items-center gap-10">
+          <div class="w-full md:w-1/2">
+            <div class="h-[300px] w-[400px] overflow-hidden rounded-lg shadow-md bg-gray-200">
+              <img src="/images/ultrasound.jpeg" alt="Ultrasound Machine" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-red-600 mb-4">3D/4D Ultrasound Imaging</h2>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              We offer high-resolution 3D/4D ultrasound for pregnancy scans, organ imaging, and musculoskeletal diagnostics.
+              This provides real-time visuals and helps in early detection of abnormalities, especially in prenatal care.
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <%- include('../partials/footer') %>
+    </main>
+  </body>
+</html>

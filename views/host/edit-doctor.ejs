@@ -1,0 +1,48 @@
+<%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+    <main class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-md">
+      <h1 class="text-3xl font-bold mb-6 text-center text-gray-800"><%= editing ? "Edit" : "Register"%> Your Doctor at Hospital</h1>
+      <form action="/host/<%= editing ? "edit-doctor" : "add-doctor"%>" method="POST" enctype="multipart/form-data" class="max-w-md mx-auto">
+        <input type="hidden" name="id" value="<%= editing ? home._id : ''%>" />
+        <input
+          type="text"
+          name="houseName"
+          value="<%= editing ? home.houseName : ''%>"
+          placeholder="Enter Dr's Name"
+          class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"/>
+        <input
+          type="text"
+          name="price"
+          value="<%= editing ? home.price : ''%>"
+          placeholder="Consultation Fee"
+          class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"/>
+        <input
+          type="text"
+          name="location"
+          value="<%= editing ? home.location : ''%>"
+          placeholder="Department and Room No"
+          class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"/>
+        <input
+          type="text"
+          name="rating"
+          value="<%= editing ? home.rating : ''%>"
+          placeholder="Dummy Rating"
+          class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"/>
+        <input
+          type="file"
+          name="photo"
+          accept="image/jpg, image/jpeg, image/png"
+          class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"/>
+        <textarea
+          name="description"
+          placeholder="Information about the Doctor"
+          class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"><%= editing ? home.description : ''%></textarea>
+        <input type="submit" value="<%= editing ? "Update " : "Add Doctor"%>" class="w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition duration-300" />
+      </form>
+    <%- include('../partials/footer') %>   
+
+    </main>
+  </body>
+</html>

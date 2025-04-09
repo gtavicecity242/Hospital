@@ -1,0 +1,51 @@
+<%- include('../partials/head') %>
+  </head>
+  <body class="bg-gray-50">
+    <%- include('../partials/nav') %>
+
+    <!-- Page Layout -->
+    <main >
+<div class="container mx-auto max-w-7xl mt-10 flex gap-6">
+      <!-- Sliding Sidebar -->
+      <aside class="w-1/4 bg-white p-6 shadow-lg rounded-lg sticky top-10 h-max">
+        <h2 class="text-2xl font-bold text-blue-600 mb-6">Non functional Navigation</h2>
+        <ul class="space-y-4 text-lg">
+          <li class="hover:text-red-500 cursor-pointer">Emergency Care</li>
+          <li class="hover:text-red-500 cursor-pointer">Cardiology</li>
+          <li class="hover:text-red-500 cursor-pointer">Orthopedics</li>
+          <li class="hover:text-red-500 cursor-pointer">Diagnostics</li>
+          <li class="hover:text-red-500 cursor-pointer">Pediatrics</li>
+          <li class="hover:text-red-500 cursor-pointer">Oncology</li>
+          <li class="hover:text-red-500 cursor-pointer">Maternity</li>
+          <li class="hover:text-red-500 cursor-pointer">Outpatient</li>
+          <li class="hover:text-red-500 cursor-pointer">Surgery</li>
+          <li class="hover:text-red-500 cursor-pointer">Pharmacy</li>
+        </ul>
+      </aside>
+
+      <!-- Hospital Main Content -->
+      <section class="w-3/4 bg-white p-8 rounded-lg shadow-md">
+        <h1 class="text-4xl font-bold text-blue-700 text-center mb-8">Welcome to LifeCare Hospital</h1>
+        <p class="text-gray-700 text-lg leading-relaxed space-y-4">
+          LifeCare Hospital is a state-of-the-art medical facility committed to excellence in patient care, research, and education. 
+          We provide a wide range of services tailored to meet the needs of individuals and families in our community. 
+          Our hospital is equipped with the latest technology and staffed with highly trained medical professionals who prioritize patient comfort and safety.
+
+          Our emergency department is open 24/7, staffed by expert physicians ready to handle critical situations. 
+          Specialized departments such as cardiology, orthopedics, neurology, and oncology work in coordination to offer comprehensive treatment plans. 
+          We believe in compassionate care and work closely with patients and families to ensure informed decisions and better health outcomes.
+
+          We are also proud of our preventive health programs, wellness checks, vaccination clinics, and educational seminars that promote healthier lifestyles. 
+          From maternity to geriatrics, our services are designed to support our patients at every stage of life. 
+
+          At LifeCare, we understand that healing is more than physical treatment — it’s emotional and spiritual too. 
+          That’s why we strive to create an environment of trust, comfort, and holistic care. 
+          Thank you for choosing us as your healthcare partner.
+        </p>
+      </section>
+    </div>
+    <%- include('../partials/footer') %>   
+
+    </main>
+  </body>
+</html>
